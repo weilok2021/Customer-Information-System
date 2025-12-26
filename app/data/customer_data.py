@@ -13,3 +13,9 @@ customers = [
              email="weilok629@gmail.com", 
              phone="012-3456789")
 ]
+
+def get_customer_by_id(id: int) -> Customer | None:
+    for customer in customers:
+        if customer.id == id:
+            return customer
+    return None
